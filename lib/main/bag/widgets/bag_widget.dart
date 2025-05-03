@@ -41,10 +41,10 @@ class _BagWidgetState extends State<BagWidget> {
       },
       child: Container(
         width: double.infinity,
-        height: 104,
         margin: const EdgeInsets.only(right: 16),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Qo‘shildi
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
@@ -52,95 +52,67 @@ class _BagWidgetState extends State<BagWidget> {
                 widget.product.imagePath,
                 fit: BoxFit.cover,
                 alignment: Alignment.topCenter,
-                height: 184,
-                width: double.infinity,
+                height: 104,
+              ),
+            ),
+            const SizedBox(width: 20),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.product.title,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16,
+                        color: Colors.black),
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    children: [
+                      Text(
+                        'Color: ',
+                        style: TextStyle(fontSize: 11, color: Colors.grey),
+                      ),
+                      Text(
+                        widget.product.color,
+                        style: TextStyle(fontSize: 11,fontWeight: FontWeight.w600,),
+                      ),
+                      SizedBox(width: 12),
+                      Text(
+                        'Size: ',
+                        style: TextStyle(fontSize: 11, color: Colors.grey),
+                      ),
+                      Text(
+                        widget.product.size,
+                        style: TextStyle(fontSize: 11,fontWeight: FontWeight.w600,),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      IconButton(icon: Icon(Icons.remove), onPressed: _decrement),
+                      Text('$_count', style: TextStyle(fontSize: 18)),
+                      IconButton(icon: Icon(Icons.add), onPressed: _increment),
+                    ],
+                  ),
+                ],
               ),
             ),
             Column(
+
               children: [
+                Icon(Icons.more_vert),
+SizedBox(height: 28,),
                 Text(
-                  widget.product.type,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 11,
-                      color: Colors.grey),
-                ),
-                Text(
-                  widget.product.title,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: Colors.black),
-                ),
-                Row(
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Color:',
-                          style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.grey),
-                        ),
-                        Text(
-                          widget.product.color,
-                          style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          'Size:',
-                          style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.grey),
-                        ),
-                        Text(
-                          widget.product.size,
-                          style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.remove),
-                      onPressed: _decrement,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Text(
-                        '$_count',
-                        style: const TextStyle(fontSize: 24),
-                      ),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.add),
-                      onPressed: _increment,
-                    ),
-                    const SizedBox(width: 32),
-                    Text(
-                      '$totalPrice ',
-                      style: const TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                  '$totalPrice',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ],
-            )
+            ),
           ],
         ),
+
       ),
     );
   }

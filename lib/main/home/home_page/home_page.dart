@@ -1,3 +1,4 @@
+import 'package:clothes_shop_project/main/bag/bag_page.dart';
 import 'package:clothes_shop_project/main/categories/shop_page/shop_page.dart';
 import 'package:clothes_shop_project/main/favorites/favorites_page.dart';
 import 'package:clothes_shop_project/main/home/home_body_page/home_body_page.dart';
@@ -18,9 +19,9 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = const [
     HomeBodyPage(),
     ShopPage(),
-   SizedBox(),
-
+BagPage(),
     FavoritesPage(),
+    SizedBox(),
     // ProfilePage(),
   ];
 

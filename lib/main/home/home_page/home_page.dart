@@ -1,10 +1,10 @@
-import 'package:clothes_shop_project/main/bag/bag_page.dart';
+import 'package:clothes_shop_project/main/bag/bag_page/bag_page.dart';
 import 'package:clothes_shop_project/main/categories/shop_page/shop_page.dart';
-import 'package:clothes_shop_project/main/favorites/favorites_page.dart';
+import 'package:clothes_shop_project/main/favorites/favorits_page/favorites_page.dart';
 import 'package:clothes_shop_project/main/home/home_body_page/home_body_page.dart';
+import 'package:clothes_shop_project/main/profil/profil_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,10 +19,9 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = const [
     HomeBodyPage(),
     ShopPage(),
-BagPage(),
+    BagPage(),
     FavoritesPage(),
-    SizedBox(),
-    // ProfilePage(),
+    ProfilPage(),
   ];
 
   @override
@@ -71,12 +70,11 @@ BagPage(),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/icons/profil.svg',
-              color: _currentIndex == 4 ? Colors.red :Color(0xFF9B9B9B),
+              color: _currentIndex == 4 ? Colors.red : Color(0xFF9B9B9B),
             ),
             label: 'Profile',
           ),
         ],
-
       ),
     );
   }

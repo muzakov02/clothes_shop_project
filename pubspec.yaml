@@ -72,6 +72,7 @@ flutter:
     - assets/images/favorites/
     - assets/images/product/
     - assets/images/bag/
+
     - assets/fonts/
 
   # An image asset can refer to one or more resolution-specific "variants", see

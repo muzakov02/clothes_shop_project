@@ -20,7 +20,10 @@ class ForgotPasswordPage extends StatelessWidget {
           Text(
             "Forgot password",
             style: TextStyle(
-                fontSize: 34, fontWeight: FontWeight.w700, color: Colors.black),
+                fontSize: 34,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Metropolis',
+                color: Colors.black),
           ),
           SizedBox(
             height: 50,
@@ -28,7 +31,10 @@ class ForgotPasswordPage extends StatelessWidget {
           Text(
             'Please, enter your email address. You will receive a link to create a new password via email.',
             style: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black),
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                fontFamily: 'Metropolis',
+                color: Colors.black),
           ),
           SizedBox(
             height: 10,
@@ -69,6 +75,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
+                    fontFamily: 'Metropolis',
                     color: Colors.white),
               ),
             ),

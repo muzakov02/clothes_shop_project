@@ -1,9 +1,9 @@
 import 'package:clothes_shop_project/login/login/login_page.dart';
 import 'package:clothes_shop_project/login/sign_up/sign_up_page.dart';
-import 'package:clothes_shop_project/main/catalog/brand_page.dart';
-import 'package:clothes_shop_project/main/favorites/favorites_page.dart';
+import 'package:clothes_shop_project/main/catalog/brand_page/brand_page.dart';
+import 'package:clothes_shop_project/main/favorites/favorits_page/favorites_page.dart';
 import 'package:clothes_shop_project/main/home/home_page/home_page.dart';
-import 'package:clothes_shop_project/main/rating/rating_page.dart';
+import 'package:clothes_shop_project/main/rating/rating_page/rating_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

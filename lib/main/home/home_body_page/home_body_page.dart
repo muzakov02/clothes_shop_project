@@ -1,6 +1,6 @@
-import 'package:clothes_shop_project/main/home/models/product.dart';
-import 'package:clothes_shop_project/widgets/main_widgets/new_clothes_widget.dart';
-import 'package:clothes_shop_project/widgets/main_widgets/sale_widgets.dart';
+import 'package:clothes_shop_project/main/home/home_body_page/widget/new_clothes_widget.dart';
+import 'package:clothes_shop_project/main/home/home_body_page/widget/sale_widgets.dart';
+import 'package:clothes_shop_project/models/product.dart';
 import 'package:flutter/material.dart';
 
 class HomeBodyPage extends StatefulWidget {
@@ -34,6 +34,7 @@ class _HomeBodyPageState extends State<HomeBodyPage> {
                     "Street clothes",
                     style: TextStyle(
                       fontSize: 34,
+                      fontFamily: 'Metropolis',
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
@@ -61,6 +62,7 @@ class _HomeBodyPageState extends State<HomeBodyPage> {
                             'Sale',
                             style: TextStyle(
                                 fontSize: 34,
+                                fontFamily: 'Metropolis',
                                 fontWeight: FontWeight.w700,
                                 color: Colors.black),
                           ),
@@ -68,6 +70,7 @@ class _HomeBodyPageState extends State<HomeBodyPage> {
                             'Super summer sale',
                             style: TextStyle(
                                 fontSize: 11,
+                                fontFamily: 'Metropolis',
                                 fontWeight: FontWeight.w400,
                                 color: Colors.grey),
                           ),
@@ -79,6 +82,7 @@ class _HomeBodyPageState extends State<HomeBodyPage> {
                           'View all',
                           style: TextStyle(
                               fontSize: 11,
+                              fontFamily: 'Metropolis',
                               fontWeight: FontWeight.w400,
                               color: Colors.grey),
                         ),
@@ -142,13 +146,14 @@ class _HomeBodyPageState extends State<HomeBodyPage> {
                             'New',
                             style: TextStyle(
                                 fontSize: 34,
+                                fontFamily: 'Metropolis',
                                 fontWeight: FontWeight.w700,
                                 color: Colors.black),
                           ),
                           Text(
                             'You’ve never seen it before!',
                             style: TextStyle(
-                                fontSize: 11,
+                                fontSize: 11, fontFamily: 'Metropolis',
                                 fontWeight: FontWeight.w400,
                                 color: Colors.grey),
                           ),
@@ -159,7 +164,7 @@ class _HomeBodyPageState extends State<HomeBodyPage> {
                         child: Text(
                           'View all',
                           style: TextStyle(
-                              fontSize: 11,
+                              fontSize: 11, fontFamily: 'Metropolis',
                               fontWeight: FontWeight.w400,
                               color: Colors.grey),
                         ),

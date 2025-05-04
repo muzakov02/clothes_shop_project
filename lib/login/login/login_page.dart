@@ -22,13 +22,14 @@ class LoginPage extends StatelessWidget {
           Text(
             "Login",
             style: TextStyle(
-                fontSize: 34, fontWeight: FontWeight.w700, color: Colors.black),
+                fontSize: 34,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Metropolis',
+                color: Colors.black),
           ),
           SizedBox(
             height: 50,
           ),
-
-
           TextFormField(
             controller: emailController,
             onTapOutside: (_) => FocusScope.of(context).unfocus(),
@@ -68,11 +69,15 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
+                    fontFamily: 'Metropolis',
                     color: Colors.black),
               ),
               IconButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPasswordPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ForgotPasswordPage()));
                   },
                   icon: Icon(
                     Icons.arrow_forward,
@@ -104,6 +109,7 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
+                    fontFamily: 'Metropolis',
                     color: Colors.white),
               ),
             ),
@@ -114,7 +120,8 @@ class LoginPage extends StatelessWidget {
           Center(
             child: Text(
               "Or sign up with social account",
-              style: TextStyle(fontSize: 15, color: Colors.grey),
+              style: TextStyle(
+                  fontSize: 15, fontFamily: 'Metropolis', color: Colors.grey),
             ),
           ),
           SizedBox(

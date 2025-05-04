@@ -81,6 +81,7 @@ class SignUpPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
+                    fontFamily: 'Metropolis',
                     color: Colors.black),
               ),
               IconButton(
@@ -118,6 +119,7 @@ class SignUpPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
+                    fontFamily: 'Metropolis',
                     color: Colors.white),
               ),
             ),
@@ -128,7 +130,8 @@ class SignUpPage extends StatelessWidget {
           Center(
             child: Text(
               "Or sign up with social account",
-              style: TextStyle(fontSize: 15, color: Colors.grey),
+              style: TextStyle(
+                  fontSize: 15, fontFamily: 'Metropolis', color: Colors.grey),
             ),
           ),
           SizedBox(

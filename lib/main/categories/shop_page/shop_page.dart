@@ -1,6 +1,8 @@
-import 'package:clothes_shop_project/widgets/categories_widgets/kids_tab_widget.dart';
-import 'package:clothes_shop_project/widgets/categories_widgets/men_tab_widget.dart';
-import 'package:clothes_shop_project/widgets/categories_widgets/women_tab_widget.dart';
+import 'package:clothes_shop_project/main/categories/shop_page/widget/kids_tab_widget.dart';
+import 'package:clothes_shop_project/main/categories/shop_page/widget/men_tab_widget.dart';
+import 'package:clothes_shop_project/main/categories/shop_page/widget/women_tab_widget.dart';
+
+
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatefulWidget {
@@ -26,6 +28,7 @@ class _ShopPageState extends State<ShopPage>
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -37,7 +40,7 @@ class _ShopPageState extends State<ShopPage>
           child: Text(
             'Categories',
             style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.w400, color: Colors.black),
+                fontSize: 18, fontWeight: FontWeight.w400, fontFamily: 'Metropolis', color: Colors.black),
           ),
         ),
         actions: [

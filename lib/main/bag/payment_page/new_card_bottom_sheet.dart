@@ -1,3 +1,4 @@
+import 'package:clothes_shop_project/widgets/elevation_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class NewCardBottomSheet extends StatefulWidget {
@@ -116,32 +117,7 @@ class _NewCardBottomSheetState extends State<NewCardBottomSheet> {
           SizedBox(
             height: 20,
           ),
-          SizedBox(
-            height: 48,
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-                foregroundColor: Colors.white,
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(24),
-                  ),
-                ),
-              ),
-              child: Text(
-                'ADD CARD',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontFamily: 'Metropolis',
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white),
-              ),
-            ),
-          ),
+         ElevationButtonWidget(text: 'ADD CARD',page: null,)
         ],
       ),
     );

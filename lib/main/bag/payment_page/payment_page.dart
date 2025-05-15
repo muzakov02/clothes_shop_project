@@ -41,7 +41,7 @@ class _PaymentPageState extends State<PaymentPage> {
               opacity: selectedCard == 'mastercard' ? 1.0 : 0.3,
               child: MastercardWidget(
                 kard: Kard(
-                    number: '* * * *  * * * *  * * * *  3947',
+                    number: '8600140411213947',
                     date: '05/23',
                     cvv: 'cvv'),
               ),

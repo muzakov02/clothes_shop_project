@@ -1,3 +1,4 @@
+import 'package:clothes_shop_project/widgets/elevation_button_widget.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 class AddingAddressPage extends StatefulWidget {
@@ -127,31 +128,7 @@ class _AddingAddressPageState extends State<AddingAddressPage> {
             ),
             SizedBox(height: 40,),
 
-            SizedBox(
-              height: 48,
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
-                  foregroundColor: Colors.white,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(24),
-                    ),
-                  ),
-                ),
-                child: Text(
-                  'SAVE ADDRESS',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white),
-                ),
-              ),
-            ),
+            ElevationButtonWidget(text: 'SAVE ADDRESS',page: null,)
           ],
         ),
       ),

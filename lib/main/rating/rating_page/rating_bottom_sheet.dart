@@ -1,3 +1,4 @@
+import 'package:clothes_shop_project/widgets/elevation_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class RatingBottomSheet extends StatefulWidget {
@@ -97,22 +98,7 @@ class _RatingBottomSheetWidgetState extends State<RatingBottomSheet> {
               ),
             ),
             SizedBox(height: 40.0),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-                minimumSize: const Size.fromHeight(50),
-              ),
-              child: const Text(
-                "SEND REVIEW",
-                style: TextStyle(
-                    fontSize: 14, fontFamily: 'Metropolis',
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white),
-              ),
-            ),
+            ElevationButtonWidget(text: 'SEND REVIEW',page: null,)
           ]),
     );
   }

@@ -1,30 +1,38 @@
+import 'package:clothes_shop_project/login/forgot_password/forgot_password_page.dart';
 import 'package:clothes_shop_project/login/login/login_page.dart';
 import 'package:clothes_shop_project/login/sign_up/sign_up_page.dart';
-import 'package:clothes_shop_project/main/catalog/brand_page/brand_page.dart';
-import 'package:clothes_shop_project/main/favorites/favorits_page/favorites_page.dart';
-import 'package:clothes_shop_project/main/home/home_page/home_page.dart';
-import 'package:clothes_shop_project/main/rating/rating_page/rating_page.dart';
+import 'package:clothes_shop_project/main/home/home_body_page/home_body_page.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'cubit/login_cubit.dart';
+import 'repo/auth_repo.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AuthRepo _authRepo = AuthRepo();
 
-  // This widget is the root of your application.
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: 'Metropolis',
+    return BlocProvider(
+      create: (_) => LoginCubit(_authRepo),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          scaffoldBackgroundColor: Color(0xFFF9F9F9),
+          appBarTheme: AppBarTheme(backgroundColor:  Color(0xFFF9F9F9)),
+          fontFamily: 'Metropolis',
+        ),
+        home: ForgotPasswordPage(),
       ),
-      home:  LoginPage(),
     );
   }
 }
-
-

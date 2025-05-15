@@ -3,6 +3,7 @@ import 'package:clothes_shop_project/main/bag/check_out_page/widget/delivery_wid
 import 'package:clothes_shop_project/main/bag/payment_page/payment_page.dart';
 import 'package:clothes_shop_project/main/bag/succes_page/succes_page.dart';
 import 'package:clothes_shop_project/models/address.dart';
+import 'package:clothes_shop_project/widgets/elevation_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -217,33 +218,10 @@ class _CheckOutPageState extends State<CheckOutPage> {
             SizedBox(
               height: 40,
             ),
-            SizedBox(
-              height: 48,
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SuccesPage()));
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
-                  foregroundColor: Colors.white,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(24),
-                    ),
-                  ),
-                ),
-                child: Text(
-                  'SUBMIT ORDER',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: 'Metropolis',
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white),
-                ),
-              ),
-            ),
+            ElevationButtonWidget(
+              text: 'Sumbit Order',
+              page: SuccesPage(),
+            )
           ],
         ),
       ),

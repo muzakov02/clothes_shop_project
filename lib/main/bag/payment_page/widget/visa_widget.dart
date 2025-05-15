@@ -43,7 +43,7 @@ class VisaWidget extends StatelessWidget {
                 'assets/icons/chip.svg',
               ),
               SizedBox(
-                height: 40,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

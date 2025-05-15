@@ -1,6 +1,8 @@
+import 'package:clothes_shop_project/core/extensions/string_extensions.dart';
 import 'package:clothes_shop_project/models/card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 
 class MastercardWidget extends StatelessWidget {
   final Kard kard;
@@ -30,7 +32,7 @@ class MastercardWidget extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                kard.number,
+                kard.number.maskAsCardNum(),
                 style: const TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 24,

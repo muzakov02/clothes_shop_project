@@ -2,6 +2,7 @@ import 'package:clothes_shop_project/main/bag/bag_page/promo_bottom_sheet.dart';
 import 'package:clothes_shop_project/main/bag/bag_page/widget/bag_widget.dart';
 import 'package:clothes_shop_project/main/bag/check_out_page/check_out_page.dart';
 import 'package:clothes_shop_project/models/product.dart';
+import 'package:clothes_shop_project/widgets/elevation_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class BagPage extends StatefulWidget {
@@ -148,35 +149,10 @@ class _BagPageState extends State<BagPage> {
                 ],
               ),
               SizedBox(height: 20),
-              SizedBox(
-                height: 48,
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CheckOutPage()));
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    foregroundColor: Colors.white,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(24),
-                      ),
-                    ),
-                  ),
-                  child: Text(
-                    'CHECK OUT',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontFamily: 'Metropolis',
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white),
-                  ),
-                ),
-              ),
+              ElevationButtonWidget(
+                text: 'Check Out',
+                page: CheckOutPage(),
+              )
             ],
           )),
     );

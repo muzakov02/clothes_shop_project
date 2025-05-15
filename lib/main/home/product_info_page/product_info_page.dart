@@ -3,6 +3,7 @@ import 'package:clothes_shop_project/main/home/home_body_page/widget/sale_widget
 import 'package:clothes_shop_project/models/product.dart';
 import 'package:clothes_shop_project/main/home/product_info_page/widget/colors_widget.dart';
 import 'package:clothes_shop_project/main/home/product_info_page/widget/size_widget.dart';
+import 'package:clothes_shop_project/widgets/elevation_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
@@ -273,20 +274,7 @@ class ProductInfoPage extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ElevatedButton(
-          onPressed: () {
-            // savatchaga qo'shish
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            minimumSize: const Size.fromHeight(50),
-          ),
-          child: const Text(
-            "ADD TO CART",
-            style: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.w400, fontFamily: 'Metropolis', color: Colors.white),
-          ),
-        ),
+        child:ElevationButtonWidget(text: 'ADD TO CART')
       ),
     );
   }

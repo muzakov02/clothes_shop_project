@@ -1,4 +1,5 @@
 import 'package:clothes_shop_project/main/home/home_body_page/home_body_page.dart';
+import 'package:clothes_shop_project/widgets/elevation_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class SuccesPage extends StatelessWidget {
@@ -46,33 +47,7 @@ class SuccesPage extends StatelessWidget {
             SizedBox(
               height: 200,
             ),
-            SizedBox(
-              height: 48,
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeBodyPage()));
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
-                  foregroundColor: Colors.white,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(24),
-                    ),
-                  ),
-                ),
-                child: Text(
-                  'CONTINUE SHOPPING',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: 'Metropolis',
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white),
-                ),
-              ),
-            ),
+           ElevationButtonWidget(text: 'CONTINUE SHOPPING',page: HomeBodyPage(),)
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:clothes_shop_project/login/widget/text_from_Field_widget.dart';
 import 'package:clothes_shop_project/main/home/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -39,19 +40,7 @@ class ForgotPasswordPage extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          TextFormField(
-            controller: emailController,
-            onTapOutside: (_) => FocusScope.of(context).unfocus(),
-            decoration: const InputDecoration(
-              labelText: ' Email',
-              labelStyle: TextStyle(color: Colors.grey),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10.0),
-                ),
-              ),
-            ),
-          ),
+         TextFromFieldWidget(controller: emailController, text: 'Email'),
           const SizedBox(height: 100),
           SizedBox(
             height: 48,
